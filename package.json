@@ -1,13 +1,17 @@
 {
   "name": "pinia-plugin-setup-reset",
-  "version": "1.2.0",
-  "description": "npm template",
+  "version": "0.0.1",
+  "description": "Pinia plugin that adds $reset method with selective reset support for Setup stores",
   "type": "module",
   "keywords": [
-    "template"
+    "pinia",
+    "plugin",
+    "reset",
+    "vue",
+    "setup-store",
+    "state-management"
   ],
   "license": "MIT",
-  "homepage": "",
   "author": "goodswifter <104248086@qq.com>",
   "files": [
     "dist"
@@ -16,7 +20,10 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.mts",
   "exports": {
-    ".": "./dist/index.mjs"
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
   },
   "sideEffects": false,
   "publishConfig": {
@@ -40,10 +47,14 @@
     "test": "vitest",
     "prepare": "husky"
   },
+  "peerDependencies": {
+    "pinia": ">=3.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
     "@types/node": "^25.3.2",
+    "@typescript-eslint/rule-tester": "^8.56.1",
     "@unocss/eslint-plugin": "^66.6.2",
     "@vue/compiler-sfc": "^3.5.29",
     "@wlydfe/eslint-config": "^1.0.1",
@@ -56,18 +67,17 @@
     "eslint": "^9.39.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
+    "pinia": "^3.0.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
     "vite": "^7.3.1",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "vue": "^3.5.29"
   },
   "config": {
     "commitizen": {
       "path": "cz-git"
     }
-  },
-  "dependencies": {
-    "pinia": "^3.0.4"
   }
 }

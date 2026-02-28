@@ -15,7 +15,7 @@ export function cloneDeep<T>(value: T, visited = new WeakMap<object, T>()): T {
 
   // 处理 Date 对象
   if (value instanceof Date) {
-    return new Date(value.getTime()) as T
+    return new Date(value?.getTime()) as T
   }
 
   // 处理 RegExp 对象
@@ -77,13 +77,16 @@ export function cloneDeep<T>(value: T, visited = new WeakMap<object, T>()): T {
     return visited.get(value as object)!
   }
 
-  const cloned = {} as T
+  const cloned: T = { ...(value as T) }
   visited.set(value as object, cloned)
 
   // 复制所有自有属性
   for (const key in value) {
     if (Object.prototype.hasOwnProperty.call(value, key)) {
-      ;(cloned as Record<string, unknown>)[key] = cloneDeep((value as Record<string, unknown>)[key], visited)
+      ;(cloned as Record<string, unknown>)[key] = cloneDeep(
+        (value as Record<string, unknown>)[key],
+        visited,
+      )
     }
   }
 
