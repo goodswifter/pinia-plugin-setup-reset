@@ -1,0 +1,36 @@
+{
+  // ---------------------- eslint ----------------------
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 一定要开启这个才能修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scss", "less", "vue"],
+
+  // ---------------------- 编辑器 ----------------------
+  // 需要显示配置vue的默认格式化器, 因为其他的工具volar可能会覆盖
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "extensions.ignoreRecommendations": true,
+  "errorLens.enabled": true,
+  "typescript.validate.enable": true,
+
+  // 控制相关文件嵌套展示
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "$(capture).test.ts, $(capture).test.tsx, $(capture).spec.ts, $(capture).spec.tsx, $(capture).d.ts",
+    "*.tsx": "$(capture).test.ts, $(capture).test.tsx, $(capture).spec.ts, $(capture).spec.tsx,$(capture).d.ts",
+    "*.env": "$(capture).env.*",
+    "README.md": "README*,CHANGELOG*,LICENSE,CNAME",
+    "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, .gitattributes, .gitignore, .gitpod.yml, .nvmrc, .browserslistrc, .node-version, .git*, .tazerc.json, package-lock.json",
+    "eslint.config.mts": ".eslintignore, .prettierignore, .stylelintignore, commitlint.config.*,prettier.config.*, stylelint.config.*, cspell.json, .eslintrc-auto-import.json, .editorconfig,  lint-staged.config.*",
+    "vite.config.ts": "tsconfig.*, uno.config.*"
+  },
+  "editor.rulers": [100, 120]
+}

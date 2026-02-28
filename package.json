@@ -1,0 +1,73 @@
+{
+  "name": "pinia-plugin-setup-reset",
+  "version": "1.2.0",
+  "description": "npm template",
+  "type": "module",
+  "keywords": [
+    "template"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "author": "goodswifter <104248086@qq.com>",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "dev": "tsx scripts/watch-build.ts",
+    "dev:watch": "unbuild --watch",
+    "dev:stub": "unbuild --stub",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "lint:lint-staged": "lint-staged",
+    "prepublishOnly": "pnpm run build",
+    "commit": "git add . && git-cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && pnpm changelog:update-links",
+    "changelog:update-links": "tsx scripts/update-changelog-links.ts",
+    "changelog:commit": "git add CHANGELOG.md && git commit -m \"docs: update changelog\" && git push && git push --tags",
+    "release": "pnpm commit && bumpp --no-push && pnpm changelog && pnpm changelog:commit && pnpm publish",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "@types/node": "^25.3.2",
+    "@unocss/eslint-plugin": "^66.6.2",
+    "@vue/compiler-sfc": "^3.5.29",
+    "@wlydfe/eslint-config": "^1.0.1",
+    "@wlydfe/unocss-config": "^1.2.3",
+    "bumpp": "^10.4.1",
+    "commitizen": "^4.3.1",
+    "conventional-changelog": "^7.1.1",
+    "conventional-changelog-cli": "^5.0.0",
+    "cz-git": "^1.12.0",
+    "eslint": "^9.39.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "unbuild": "^3.6.1",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-git"
+    }
+  },
+  "dependencies": {
+    "pinia": "^3.0.4"
+  }
+}

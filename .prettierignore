@@ -1,0 +1,18 @@
+/dist/**
+.local
+.output.js
+/node_modules/**
+
+**/*.svg
+**/*.sh
+
+/public/*
+**/iconfont/**
+
+pnpm-lock.yaml
+
+# auto-imports.d.ts
+auto-imports.d.ts
+# component.d.ts
+component.d.ts
+.eslintrc-auto-import.json
