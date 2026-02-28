@@ -12,6 +12,7 @@
     "state-management"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/goodswifter/pinia-plugin-setup-reset",
   "author": "goodswifter <104248086@qq.com>",
   "files": [
     "dist"
