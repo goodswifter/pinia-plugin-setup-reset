@@ -1,3 +1,7 @@
+## [0.0.4](https://github.com/goodswifter/pinia-plugin-setup-reset/compare/v0.0.3...v0.0.4) (2026-02-28)
+
+
+
 ## [0.0.3](https://github.com/goodswifter/pinia-plugin-setup-reset/compare/ca230a0ef4ef877e4bc91facae143ae9a83a3451...v0.0.3) (2026-02-28)
 
 
