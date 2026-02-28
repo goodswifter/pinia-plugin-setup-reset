@@ -1,6 +1,6 @@
 {
   "name": "pinia-plugin-setup-reset",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Pinia plugin that adds $reset method with selective reset support for Setup stores",
   "type": "module",
   "keywords": [
