@@ -1,3 +1,12 @@
+# [0.1.0](https://github.com/goodswifter/pinia-plugin-setup-reset/compare/v0.0.4...v0.1.0) (2026-03-03)
+
+
+### Features
+
+* 新增测试版本, 支持pinia 2.0版本 ([22c63f3](https://github.com/goodswifter/pinia-plugin-setup-reset/commit/22c63f3b5c35651af34ce48966bcbae00c175f6d))
+
+
+
 ## [0.0.4](https://github.com/goodswifter/pinia-plugin-setup-reset/compare/v0.0.3...v0.0.4) (2026-02-28)
 
 
