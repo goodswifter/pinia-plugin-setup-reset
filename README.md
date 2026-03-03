@@ -90,7 +90,7 @@ userStore.$reset('xxx') // TS 报错：类型不存在
 
 | 依赖  | 版本要求 |
 | ----- | -------- |
-| pinia | >= 3.0.0 |
+| pinia | >= 2.0.0 |
 | vue   | >= 3.0.0 |
 
 ## License

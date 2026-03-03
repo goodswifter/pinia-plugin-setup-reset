@@ -1,10 +1,14 @@
+import { createPinia } from 'pinia'
+import { resetPlugin } from 'pinia-plugin-setup-reset'
 import { createApp } from 'vue'
 import App from './App.vue'
-// 配置unocss
 import 'virtual:uno.css'
-// 配置全局样式
 import '@/assets/styles/index.scss'
 
 const app = createApp(App)
+
+const pinia = createPinia()
+pinia.use(resetPlugin)
+app.use(pinia)
 
 app.mount('#app')
